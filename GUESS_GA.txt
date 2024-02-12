@@ -1,0 +1,35 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<time.h>
+
+int main(){
+int num=0,a=1;
+int time=4;
+clrscr();
+cout<<"Guess a number beetwen 1 to 100"<<endl;
+//cin>>num;
+do{
+cout<<"Turns reaming"<< time+1 <<endl;
+cin>>num;
+int guess = rand()%100;
+if(num==guess){
+cout<<"Coungratulations "<<endl;
+a=0;
+}
+else if(num<guess){
+cout<<"try a  bigger number "<<endl;
+}
+else if(num>guess){
+cout<<"try a smaller number "<<endl;
+}
+else{
+cout<<"try again "<<endl;
+}
+
+}while(a==1 && time--);
+
+
+getch();
+return (0);
+}
